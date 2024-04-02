@@ -31,10 +31,10 @@ const navLinks = [
 export default function AboutMe() {
   return (
     <>
-      <header className="w-full mx-auto">
+      <header className="w-full mx-auto h-full">
         <nav className="max-w-[1450px] w-full flex items-end justify-between mx-auto">
           <Link href="/" className="">
-            <Image src="/coder.svg" alt="coder" className="" width={191} height={80} priority/>
+            <Image src="/coder.svg" alt="coder" className="sm:w-[120px] md:w-[140px] lg:w-[160px] xl:w-[180px]" width={191} height={80} priority/>
           </Link>
 
           <div className="flex items-end justify-center gap-1">
@@ -51,11 +51,41 @@ export default function AboutMe() {
           </div>
         </nav>
 
-        <div>
-          <div className=""></div>
-          <Image src="" alt="coder" className="absolute right-0 top-0" width={191} height={80} priority/>
+        <div className="relative max-w-[1450px] mx-auto w-full h-full flex items-center justify-between">
+          <div className="relative flex flex-col h-full items-start justify-center gap-2 sm:mt-20 xl:mt-32">
+            <div className="bg-[var(--colour-orange)] px-4 py-2">
+              <p className="lg:text-[16px] xl:text-[20px] font-thin">Hello, I am</p>
+            </div>
+            <h2 className="lg:text-[50px] xl:text-[70px] font-bold">Mr. John Weary</h2>
+            <p className="lg:text-[16px] xl:text-[20px] font-normal">A Professional Web Developer and UI/UX Designer.</p>
+            <div className="flex items-center justify-start gap-2 mt-8">
+              <button type="button" className="bg-[var(--colour-orange)] px-6 py-4 rounded-md text-[1.15rem] hover:bg-[var(--colour-orange-hover)]">Download CV</button>
+              <button type="button" className="bg-transparent px-6 py-4 rounded-md text-[1.15rem] hover:bg-[#70707051] border">My Work</button>
+            </div>
+          </div>
+
+          <Image src="/hero_photo.png" alt="coder photo" 
+            className="absolute right-0 top-0 -z-10 max-w-full w-auto h-auto" 
+            width={1430} height={953} priority
+          />
         </div>
+
+        {/* <div className="absolute mx-auto bottom-0 border border-[var(--colour-orange)] w-[32px] h-[48px] rounded-lg px-2 py-4"></div> */}
       </header>
+
+      <section className="w-full max-w-[1450px] mt-64 mb-64 flex flex-row items-center justify-between">
+        <Image src="/image1.png" className="rounded-md w-auto h-auto" width={700} height={760} alt="hero photo"/>
+        
+        <div>
+          <h3>Read About My Life Struggle Story!</h3>
+          <p className="max-w-[647px]">Sed ut perspiciatis unde omnis iste natus error sit voluptatem  totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et is the quasi architecto beatae vitae dicta sunt explicabo.</p>
+
+          <div>
+            <button type="button" className="bg-[var(--colour-orange)] px-6 py-4 rounded-md text-[1.15rem] hover:bg-[var(--colour-orange-hover)]">Hire Me!</button>
+            <button type="button" className="bg-transparent px-6 py-4 rounded-md text-[1.15rem] hover:bg-[#70707051] border">About Me</button>
+          </div>
+        </div>
+      </section>
     </>
   )
 }
