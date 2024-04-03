@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import SkillLevel from "./components/SkillLevel";
 
 const navLinks = [
   {
@@ -65,7 +66,7 @@ export default function AboutMe() {
           </div>
 
           <Image src="/hero_photo.png" alt="coder photo" 
-            className="absolute right-0 top-0 -z-10 max-w-full w-auto h-auto" 
+            className="absolute right-0 top-0 -z-10 max-w-[1450] w-auto h-auto" 
             width={1430} height={953} priority
           />
         </div>
@@ -73,14 +74,24 @@ export default function AboutMe() {
         {/* <div className="absolute mx-auto bottom-0 border border-[var(--colour-orange)] w-[32px] h-[48px] rounded-lg px-2 py-4"></div> */}
       </header>
 
-      <section className="w-full max-w-[1450px] mt-64 mb-64 flex flex-row items-center justify-between">
-        <Image src="/image1.png" className="rounded-md w-auto h-auto" width={700} height={760} alt="hero photo"/>
+      <section className="w-full max-w-[1450px] mt-64 mb-64 flex flex-row items-center justify-between mx-auto gap-4 p-4">
+        <div className="w-[709px] h-[832px] relative">
+          <Image src="/image1.png" className="absolute top-0 right-0 rounded-md w-auto h-auto" width={700} height={760} alt="hero photo"/>
+          <div className="absolute bottom-0 -left-16 w-[262px] h-[243px] bg-[#111111] rounded-md"></div>
+        </div>
         
-        <div>
-          <h3>Read About My Life Struggle Story!</h3>
-          <p className="max-w-[647px]">Sed ut perspiciatis unde omnis iste natus error sit voluptatem  totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et is the quasi architecto beatae vitae dicta sunt explicabo.</p>
+        <div className="flex flex-col item-center justify-between gap-8">
+          <h3 className="text-[40px] max-w-[347px]">Read About My Life Struggle Story!</h3>
+          <p className="text-[18px] max-w-[647px]">Sed ut perspiciatis unde omnis iste natus error sit voluptatem  totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et is the quasi architecto beatae vitae dicta sunt explicabo.</p>
 
-          <div>
+          <div className="flex flex-col items-start justify-start gap-4">
+            <SkillLevel skill={"PHP"} progress={80} colour={"orange"} />
+            <SkillLevel skill={"Node"} progress={80} colour={"orange"} />
+            <SkillLevel skill={"HTML, CSS, JS"} progress={80} colour={"orange"} />
+            <SkillLevel skill={"NEXT.JS"} progress={80} colour={"orange"} />
+          </div>
+
+          <div className="flex item-center justify-start gap-2">
             <button type="button" className="bg-[var(--colour-orange)] px-6 py-4 rounded-md text-[1.15rem] hover:bg-[var(--colour-orange-hover)]">Hire Me!</button>
             <button type="button" className="bg-transparent px-6 py-4 rounded-md text-[1.15rem] hover:bg-[#70707051] border">About Me</button>
           </div>
