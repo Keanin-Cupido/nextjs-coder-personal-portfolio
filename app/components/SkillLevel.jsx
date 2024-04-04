@@ -1,6 +1,5 @@
 export default function SkillLevel({skill, progress, colour}) {
     const percentageLevel = String(Math.round(648 * (progress/100)));
-    console.log(percentageLevel);
     return (
         <div className="flex flex-col items-start justify-start gap-2">
             <p className="">{skill}</p>
